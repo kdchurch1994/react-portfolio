@@ -24,7 +24,7 @@ function ContactForm() {
     
       const handleChange = (e) => {
         if (e.target.name === 'email') {
-          const isValid = validateEmail(e.target.value);
+          const isValid = emailValidation(e.target.value);
           if (!isValid) {
             setErrorMessage('Your email is invalid.');
           } else {
