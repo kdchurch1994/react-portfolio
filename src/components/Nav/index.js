@@ -13,7 +13,7 @@ function Nav(props) { //function that creates the Nav component
                     <span onClick={() => setCurrentLink('portfolio')}>Portfolio</span>
                 </li>
                 <li className={currentLink === "contact" ? "mx-2 navActive": "mx-2"}>
-                    <span onClick={() => setCurrentLink('contact')}>About Me</span>
+                    <span onClick={() => setCurrentLink('contact')}>Contact Me</span>
                 </li>
                 <li className={currentLink === "resume" ? "mx-2 navActive": "mx-2"}>
                     <span onClick={() => setCurrentLink('resume')}>resume</span>

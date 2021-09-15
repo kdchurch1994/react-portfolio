@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
-import Nav from './components/Nav';
+//import Nav from './components/Nav';
 import Contact from './components/Contact';
 import About from './components/About';
 
