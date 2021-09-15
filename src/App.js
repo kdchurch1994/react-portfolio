@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import Contact from './components/Contact';
+import About from './components/About';
 
 function App() {
+  const [currentLink, setCurrentLink] = useState("about");
+
+  const switchLink = () => {
+    switch (currentLink) {
+      case "about":
+        return <About />;
+      case "contact":
+        return <Contact />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <Header currentLink={currentLink} setCurrentLink={setCurrentLink}></Header>
+      </div>
+      <div>
+        <main>{switchLink()}</main>
+      </div>
     </div>
   );
 }
